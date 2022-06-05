@@ -78,10 +78,12 @@ def lpccm_example_main() -> Optional[int] | None:
     any_fail = lpc.run_tests(tests_unified)
     return completion_display(any_fail)
 
+
 def main() -> Optional[int] | None:
     # solution_hash_display([['main']])
     # solution_hash_display([['fail test on purpose and exit']])
     return lpccm_example_main()
+
 
 if __name__ == '__main__':  # most of this relevant only for large recursion situations or concurrency needs
     # sys.setrecursionlimit(5000)
