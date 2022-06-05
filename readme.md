@@ -1,4 +1,6 @@
-<h1><center><span style="color:purple">L</span>
+<h1 style = font-size:80px>
+<div style="text-align: center;">
+<span style="color:purple">L</span>
 <span style="color:violet">e</span>
 <span style="color:blue">e</span>
 <span style="color:green">t</span>
@@ -7,14 +9,14 @@
 <span style="color:orange">i</span>
 <span style="color:red">d</span>
 <span style="color:violet">e</span>
-</center>
+</div>
+</h1>
 
 
 # To make algorithm and data structure learning more exciting, colorful and enjoyable.
 
 LeetPride interrogates the created classes and 
-runs the tests specified to ensure success and optimize focus on problem
-solving maximizing data structure an algorithm absorption.
+runs the tests specified to ensure success and optimize focus on problem-solving maximizing data structure an algorithm absorption.
 
 ><h3>One time Setup</h3>
 >>simply install with 
@@ -35,7 +37,7 @@ solving maximizing data structure an algorithm absorption.
 >>Then quickly get going given any problem with a typical py file to begin coding solutions 
 with and import and common python boilerplate for generating and running tests on solutions.
 >>
->>There are 4 basic simple setups to get going in seconds. THe 2nd is just boiler plate that 
+>>There are 4 basic simple setups to get going in seconds. THe 2nd is just boilerplate that 
 > will be replaced as you solve a problem. Also, there are capabilities to easily 
 test and time multiple method implementations and different class method call sequencing for
 class testing. 
