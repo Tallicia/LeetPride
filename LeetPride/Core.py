@@ -1,13 +1,11 @@
 import os.path
-import sys
-# import threading
+import sys  # import threading
 from typing import Optional, List
 from time import time
 from functools import wraps
 from colorama import Fore, Back, Style
 from pystyle import Colorate, Colors, Box
-import inspect
-# from hashlib import md5
+import inspect  # from hashlib import md5
 from zlib import adler32  # , crc32
 
 
@@ -20,7 +18,6 @@ def timeit(f):
         dur = t2 - t1
         print(Fore.YELLOW + 'Duration :', '%0.9f' % dur + Style.RESET_ALL, end=' ')
         return res
-
     return timing
 
 
@@ -64,6 +61,8 @@ def run_process(tests_unified: List, params: Optional[dict] = None, module: str 
     if params:
         if 'time_all' in params.keys() and params['time_all']:
             time_all = True
+        if 'module' in params.keys():
+            module = params['module']
     lpc = LeetPrideCore(time_all=time_all, module=module)
     lpc.solution_hash_display(tests_unified=tests_unified)
     any_fail = lpc.run_tests(tests_unified)

@@ -22,17 +22,6 @@ data structure an algorithm absorption, groking and satisfaction.
 ><h3>One time Setup</h3>
 >>simply install with 
 ```pip install LeetPride```
->
->[LeetPride depends on modules listed in requirements.txt](requirements.txt)
->
->It is recommended to create a venv and install the requirements.
->>
->>```
->>    python3 -m venv venv
->>    ./venv/scripts/activate
->>    python3 -m pip install -U pip
->>    python3 -m pip install -r requirements.txt 
->>
 
 Screenshot of the 4 simple steps running in seconds.
 ![img](LP_Examples/LeetPride-001.png)
@@ -134,3 +123,16 @@ are being cleaned up and will be included in very near term update.
 Enjoy!
 <br>
 Tallicia
+
+
+>
+>[LeetPride depends on modules listed in requirements.txt](requirements.txt)
+>
+>It is recommended to create a venv and install requirements.
+>>
+>>```
+>>    python3 -m venv venv
+>>    ./venv/scripts/activate
+>>    python3 -m pip install -U pip
+>>    python3 -m pip install -r requirements.txt 
+>>

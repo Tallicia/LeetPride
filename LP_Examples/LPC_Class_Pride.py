@@ -22,15 +22,11 @@ def generate_tests():
 
 
 def lpccp_example_main() -> Optional[int] | None:
-    tests_unified = generate_tests()
-    lpc = LeetPrideCore(module=__name__)
-    lpc.solution_hash_display(tests_unified=tests_unified)
-    any_fail = lpc.run_tests(tests_unified)
-    return completion_display(any_fail)
+    return run_process(generate_tests(), params={'module': __name__})
 
 
 def main() -> Optional[int] | None:
-    return lpc_example_main()
+    return lpccp_example_main()
 
 
 if __name__ == '__main__':  # most of this relevant only for large recursion situations or concurrency needs
