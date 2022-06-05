@@ -16,11 +16,12 @@
 # To make algorithm and data structure learning more exciting, colorful and enjoyable.
 
 LeetPride interrogates the created classes and 
-runs the tests specified to ensure success and optimize focus on problem-solving maximizing data structure an algorithm absorption.
+runs the tests specified to ensure success and optimize focus on problem-solving maximizing 
+data structure an algorithm absorption, groking and satisfaction.
 
 ><h3>One time Setup</h3>
 >>simply install with 
-```pip install leetpride```
+```pip install LeetPride```
 >
 >[LeetPride depends on modules listed in requirements.txt](requirements.txt)
 >
