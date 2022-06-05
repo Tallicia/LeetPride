@@ -64,6 +64,8 @@ class testing.
 >>[Multiple examples can be found in the /Examples folder of test generation simplicity and support for
 > complex cases.](LP_Examples)
 >
+[Online gist example with screenshot of results for Daily LeetCode](https://gist.github.com/Tallicia/dcbfc28ee34b0685a88ad1bd07f90830)
+>
 >>Example of required generate_tests() method using separate tests and
 expected results zipped together: 
 

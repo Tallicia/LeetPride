@@ -1,4 +1,5 @@
-from LeetPride.Core import *
+from typing import Optional
+from LeetPride import run_process
 
 
 class Pride:
