@@ -37,12 +37,18 @@ data structure an algorithm absorption, groking and satisfaction.
 Screenshot of the 4 simple steps running in seconds.
 ![img](Examples/LeetPride-001.png)
 
->><h3>Happy Problem Solving</h3>
->>Then quickly get going given any problem with a typical py file to begin coding solutions 
-with and import and common python boilerplate for generating and running tests on solutions.
+>><h3>Happy Problem Solving and Happy Pride !!</h3>
+> 
+>>Quickly get going on given any problem by simply creating a py file to 
+> begin coding solutions starting with import then common python boilerplate for 
+> generating and running tests on solutions.
 >>
->>There are 4 basic simple setups to get going in seconds. THe 2nd is just boilerplate that 
-> will be replaced as you solve a problem. Also, there are capabilities to easily 
+>>
+> 
+>>There are 4 basic simple setups to get going in seconds. The last is the code you will 
+> write and generally goes first, followed by generate_tests() and then the 
+> main boilierplate runners. 
+> Also, there are capabilities to easily 
 test and time multiple method implementations and different class method call sequencing for
 class testing. 
 
