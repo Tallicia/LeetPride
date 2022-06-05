@@ -33,6 +33,9 @@ runs the tests specified to ensure success and optimize focus on problem-solving
 >>    python3 -m pip install -r requirements.txt 
 >>
 
+Screenshot of the 4 simple steps running in seconds.
+![img](Examples/LeetPride-001.png)
+
 >><h3>Happy Problem Solving</h3>
 >>Then quickly get going given any problem with a typical py file to begin coding solutions 
 with and import and common python boilerplate for generating and running tests on solutions.
@@ -81,8 +84,13 @@ expected results zipped together:
 
 <h2>For either -method- or -class- solutions:</h2>
 <li>
-<ul> A or B ( but supports mixing too even. )<br>
-A. Class - class questions generally entail verifying output of sequenced method calls:
+
+> >
+>><ul>
+>>A or B ( but supports mixing too even. )
+>A. Class - class questions generally entail verifying output of sequenced method calls:
+>
+>
 
     class Pride:
         def __init__(self, always)
@@ -90,10 +98,12 @@ A. Class - class questions generally entail verifying output of sequenced method
          
         def love(sef, equality:str = 'forever') -> bool:
             return self.love == True
-</ul>
+></ul>
+><ul>
+>B. Method - general class Solution, so to align with LC practices:
+>
+>
 
-<ul>
-B. Method - general class Solution, so to align with LC practices:
 
     class Solution:
         # @timeit
@@ -113,3 +123,7 @@ duration information detail.
 Graphies and Linkies helper methods for easy test setup and printout of
 representations of node graphs, trees, and linked lists 
 are being cleaned up and will be included in very near term update.
+
+Enjoy!
+<br>
+Tallicia
