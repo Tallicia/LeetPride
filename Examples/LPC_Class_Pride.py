@@ -10,7 +10,6 @@ class Pride:
 
 
 def generate_tests():
-    tests_unified = []
     #  \/\/\/\/\/\/\/\/\/\/ Set tests in these sections \/\/\/\/\/\/\/\/\/\/ #
     tests = (['Pride', 'loving', ],
              ['forever !',
@@ -19,8 +18,7 @@ def generate_tests():
     expected_test_results = [True, 'LGBTQ Lover forever !!!!', ]
     #  ^^^^^^^^^^^^^^^^^^^^ Set tests in these sections ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ #
 
-    tests_unified += list(zip(tests[0], tests[1], expected_test_results))
-    return tests_unified
+    return list(zip(tests[0], tests[1], expected_test_results))
 
 
 def main() -> Optional[int] | None:
