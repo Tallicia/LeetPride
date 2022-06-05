@@ -28,59 +28,64 @@ with and import and common python boilerplate for generating and running tests o
 test and time multiple method implementations and different class method call sequencing for
 class testing. 
 
-```from leetpridecore import *```
+<ol>
+<li>
 
+    from leetpridecore import *
+</li>
 <h2>For either -method- or -class- solutions:</h2>
-Class - class questions generally entail verifying output of sequenced method calls:
-```
-class Pride:
-    def __init__(self, always)
-        self.love = always
-     
-    def love(sef, equality:str = 'forever') -> bool:
-        return self.love == True
-```
+<li>
+<ul> A or B ( but supports mixing too even. )<br>
+A. Class - class questions generally entail verifying output of sequenced method calls:
 
-Method - general class Solution, so to align with LC practices:
-```
-class Solution:
-    # @timeit
-    def method1(self, nums: List[int], target: int) -> List[int | None]:
-        return [nums[target]]
-```
+    class Pride:
+        def __init__(self, always)
+            self.love = always
+         
+        def love(sef, equality:str = 'forever') -> bool:
+            return self.love == True
+</ul>
+
+<ul>
+B. Method - general class Solution, so to align with LC practices:
+
+    class Solution:
+        # @timeit
+        def method1(self, nums: List[int], target: int) -> List[int | None]:
+            return [nums[target]]
+</ul>
+</li>
 
 Example of required generate_tests() method using separate tests and
 expected results zipped together: 
-``` 
-def generate_tests():
-    tests = (['Pride', 'loving', ],
-             ['forever !',
-              None,
-              ])
-    expected_test_results = [True, 'LGBTQ Lover forever !!!!', ]
-
+<li>
+ 
+    def generate_tests():
+        tests = (['Pride', 'loving', ],
+                 ['forever !',
+                  None,
+                  ])
+        expected_test_results = [True, 'LGBTQ Lover forever !!!!', ]
     return list(zip(tests[0], tests[1], expected_test_results))
-```
+</li>
 
-[Examples can be found in the Examples Folder](Examples)
+[Examples can be found in the /Examples folder of test generation simplicity and support for complex cases.](Examples)
 
-> The standard main for running Class and Method solution tests is as follows:
-
-
-
-```
-def main() -> Optional[int] | None:
-    tests_unified = generate_tests()
-    lpc = LeetPrideCore(time_all=True)
-    lpc.solution_hash_display(tests_unified)
-    any_fail = lpc.run_tests(tests_unified)
-    return completion_display(any_fail)
+ The standard main for running Class and Method solution tests is as follows:
 
 
-if __name__ == '__main__':
-    exit(main())
-    
-```
+<li>
+
+    def main() -> Optional[int] | None:
+        tests_unified = generate_tests()
+        lpc = LeetPrideCore(time_all=True)
+        lpc.solution_hash_display(tests_unified)
+        any_fail = lpc.run_tests(tests_unified)
+        return completion_display(any_fail)
+    if __name__ == '__main__':
+        exit(main())
+</li>
+</ol>
 
 # A few notes:
 Instantiating the LeetCodeCore object takes an optional time_all bool parameter.
