@@ -44,26 +44,25 @@ class testing.
 <ol>
 <li>
 
-    from leetpridecore import *
+    from LeetPride import run_process
 </li>
 
 <li>
 
 >> The standard main for running Class and Method solution tests is as follows:
 
-    def main() -> Optional[int] | None:
-        tests_unified = generate_tests()
-        lpc = LeetPrideCore(time_all=True)
-        lpc.solution_hash_display(tests_unified)
-        any_fail = lpc.run_tests(tests_unified)
-        return completion_display(any_fail)
+    def main() -> int:
+        return run_process(generate_tests())
+    
+    
     if __name__ == '__main__':
         exit(main())
 </li>
 
 <li>
 
->>[Multiple examples can be found in the /Examples folder of test generation simplicity and support for complex cases.](LP_Examples)
+>>[Multiple examples can be found in the /Examples folder of test generation simplicity and support for
+> complex cases.](LP_Examples)
 >
 >>Example of required generate_tests() method using separate tests and
 expected results zipped together: 
@@ -71,11 +70,11 @@ expected results zipped together:
  
     def generate_tests():
         tests = (['Pride', 'loving', ],
-                 ['forever !',
-                  None,
+                 [None,
+                  'forever',
                   ])
         expected_test_results = [True, 'LGBTQ Lover forever !!!!', ]
-    return list(zip(tests[0], tests[1], expected_test_results))
+        return list(zip(tests[0], tests[1], expected_test_results))
 </li>
 
 <h2>For either -method- or -class- solutions:</h2>
@@ -89,11 +88,11 @@ expected results zipped together:
 >
 
     class Pride:
-        def __init__(self, always)
+        def __init__(self, always: bool = True):
             self.love = always
-         
-        def love(sef, equality:str = 'forever') -> bool:
-            return self.love == True
+    
+        def loving(self, equality: str = 'forever more') -> bool:
+            return 'LGBTQ Lover ' + equality + ' !!!!' if self.love else 'Send Love'
 ></ul>
 ><ul>
 >B. Method - general class Solution, so to align with LC practices:
@@ -109,6 +108,40 @@ expected results zipped together:
 </li>
 
 </ol>
+
+>> All together for reference example:
+> 
+> ```pip install LeetPride```
+ 
+
+    from LeetPride import run_process
+    
+    
+    class Pride:
+        def __init__(self, always: bool = True):
+            self.love = always
+    
+        def loving(self, equality: str = 'forever more') -> bool:
+            return 'LGBTQ Lover ' + equality + ' !!!!' if self.love else 'Send Love'
+    
+    
+    def generate_tests():
+        tests = (['Pride', 'loving', ],
+                 [None,
+                  'forever',
+                  ])
+        expected_test_results = [True, 'LGBTQ Lover forever !!!!', ]
+        return list(zip(tests[0], tests[1], expected_test_results))
+    
+    
+    def main() -> int:
+        return run_process(generate_tests())
+    
+    
+    if __name__ == '__main__':
+        exit(main())
+
+
 
 # A few notes:
 Instantiating the LeetCodeCore object takes an optional time_all bool parameter.

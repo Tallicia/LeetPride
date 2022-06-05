@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="LeetPride",
-    version="0.6.9.2.2",
+    version="0.6.9.2.3",
     author="Alicia Yingling",
     author_email="AliciaYingling@gmail.com",
     description="LeetPride makes for a beautiful problem solving and learning environment for test and timing data "
