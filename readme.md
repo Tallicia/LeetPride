@@ -35,7 +35,7 @@ data structure an algorithm absorption, groking and satisfaction.
 >>
 
 Screenshot of the 4 simple steps running in seconds.
-![img](Examples/LeetPride-001.png)
+![img](LP_Examples/LeetPride-001.png)
 
 >><h3>Happy Problem Solving and Happy Pride !!</h3>
 > 
@@ -74,7 +74,7 @@ class testing.
 
 <li>
 
->>[Multiple examples can be found in the /Examples folder of test generation simplicity and support for complex cases.](Examples)
+>>[Multiple examples can be found in the /Examples folder of test generation simplicity and support for complex cases.](LP_Examples)
 >
 >>Example of required generate_tests() method using separate tests and
 expected results zipped together: 

@@ -5,11 +5,11 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="LeetPride",
-    version="0.6.9.001",
+    version="0.6.9.2.1",
     author="Alicia Yingling",
     author_email="AliciaYingling@gmail.com",
     description="LeetPride makes for a beautiful problem solving and learning environment for test and timing data "
-                "structures and algorithms",
+                "structures and algorithms. Happy Pride everyone and may the leet coding favor your fortune.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Tallicia/LeetPride",

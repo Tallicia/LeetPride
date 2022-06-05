@@ -20,6 +20,7 @@ def timeit(f):
         dur = t2 - t1
         print(Fore.YELLOW + 'Duration :', '%0.9f' % dur + Style.RESET_ALL, end=' ')
         return res
+
     return timing
 
 
@@ -58,8 +59,20 @@ def completion_display(any_fail):
     return any_fail
 
 
+def run_process(tests_unified: List, params: Optional[dict] = None, module: str = '__main__') -> int:
+    time_all = False
+    if params:
+        if 'time_all' in params.keys() and params['time_all']:
+            time_all = True
+    lpc = LeetPrideCore(time_all=time_all, module=module)
+    lpc.solution_hash_display(tests_unified=tests_unified)
+    any_fail = lpc.run_tests(tests_unified)
+    return completion_display(any_fail)
+
+
 class LeetPrideCore:
-    def __init__(self, time_all: Optional[bool] = False):
+    def __init__(self, time_all: Optional[bool] = False, module: str = '__main__'):
+        self.test_module = module
         self.test_class = None
         self.time_all = time_all
         self.timing_set = {}
@@ -74,9 +87,13 @@ class LeetPrideCore:
                 if type(chk) is str and chk.isupper():
                     finds += [t[0]]
         finds = sorted(set(finds))
-        module = __import__('__main__')
-        file = os.path.basename(inspect.getfile(module))
         for sol_name in finds:
+            # module = __import__(self.test_module + '.' + sol_name)
+            module = __import__(self.test_module)
+            # module = self.test_module
+            file = os.path.basename(inspect.getfile(module))
+            # print(f'{self.test_module=}')
+            # print(f'{module=}')
             sol_class = getattr(module, sol_name)
             sol_source, sol_members = file + '\n' + sol_name + '\n', ''
             try:
@@ -110,7 +127,7 @@ class LeetPrideCore:
         for tt in tests_unified:
             if tt[0][0][0].isupper():
                 test_class_name = tt[0]  # Class Instantiate in first test entry
-                print(str_style('\n' + '-'*10+' Instantiating: '
+                print(str_style('\n' + '-' * 10 + ' Instantiating: '
                                 + test_class_name, hvd='h', sp=4, col=Colors.yellow_to_green))
                 p, params = tt[1], None
                 if p:
@@ -129,7 +146,7 @@ class LeetPrideCore:
         return any_fail
 
     def set_test_class(self, test_class_name='Solution', params=None):
-        module = __import__('__main__')
+        module = __import__(self.test_module)
         sol_class = getattr(module, test_class_name)
         if sol_class and params:
             eval_s = 'sol_class(' + params + ')'
@@ -145,7 +162,7 @@ class LeetPrideCore:
                 params = "'" + p + "'"
             else:
                 params = str(p)[1: -1]
-        print(str_style(' :Testing: ' + '-'*60 + ' :Testing: ', hvd='d', sp=1, col=Colors.purple_to_red))
+        print(str_style(' :Testing: ' + '-' * 60 + ' :Testing: ', hvd='d', sp=1, col=Colors.purple_to_red))
         i, fail = test_and_result[1], False
         if params:
             eval_s = 'self.test_class.' + method_name + '(' + params + ')'

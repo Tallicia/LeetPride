@@ -1,4 +1,4 @@
-from LeetPrideCore import *
+from LeetPride.Core import *
 
 
 class Solution:
@@ -20,12 +20,16 @@ def generate_tests():
     return tests_unified
 
 
-def main() -> Optional[int] | None:
+def lpcm1_example_main() -> Optional[int] | None:
     tests_unified = generate_tests()
-    lpc = LeetPrideCore(time_all=True)
-    lpc.solution_hash_display(tests_unified)
+    lpc = LeetPrideCore(module=__name__)
+    lpc.solution_hash_display(tests_unified=tests_unified)
     any_fail = lpc.run_tests(tests_unified)
     return completion_display(any_fail)
+
+
+def main() -> Optional[int] | None:
+    return lpcm1_example_main()
 
 
 if __name__ == '__main__':  # most of this relevant only for large recursion situations or concurrency needs

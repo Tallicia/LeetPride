@@ -1,4 +1,4 @@
-from LeetPrideCore import *
+from LeetPride.Core import *
 
 
 class NumMatrix:
@@ -71,15 +71,17 @@ def generate_tests():
     return tests_unified
 
 
-def main() -> Optional[int] | None:
-    # solution_hash_display([['main']])
-    # solution_hash_display([['fail test on purpose and exit']])
+def lpccm_example_main() -> Optional[int] | None:
     tests_unified = generate_tests()
-    lpc = LeetPrideCore()
-    lpc.solution_hash_display(tests_unified)
+    lpc = LeetPrideCore(module=__name__)
+    lpc.solution_hash_display(tests_unified=tests_unified)
     any_fail = lpc.run_tests(tests_unified)
     return completion_display(any_fail)
 
+def main() -> Optional[int] | None:
+    # solution_hash_display([['main']])
+    # solution_hash_display([['fail test on purpose and exit']])
+    return lpccm_example_main()
 
 if __name__ == '__main__':  # most of this relevant only for large recursion situations or concurrency needs
     # sys.setrecursionlimit(5000)
