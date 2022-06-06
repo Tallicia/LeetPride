@@ -11,7 +11,9 @@
 <span style="color:violet">e</span>
 </div>
 </h1>
-
+<center>
+💜 💙 🍏 💚 💛 📙 🍎
+</center>
 
 # To make algorithm and data structure learning more exciting, colorful and enjoyable.
 
@@ -171,3 +173,31 @@ Tallicia
 >>    python3 -m pip install -U pip
 >>    python3 -m pip install -r requirements.txt 
 >>
+
+>> PURPLE HEART (&#x1F49C;): 💜
+BLUE HEART (&#x1F499;): 💙
+GREEN APPLE (&#x1F34F;): 🍏
+GREEN HEART (&#x1F49A;): 💚
+YELLOW HEART (&#x1F49B;): 💛
+ORANGE BOOK (&#x1F4D9;): 📙
+RED APPLE (&#x1F34E;): 🍎
+GREEN BOOK (&#x1F4D7;): 📗
+BLUE BOOK (&#x1F4D8;): 📘
+LARGE RED CIRCLE (&#x1F534;): 🔴
+
+<center>
+💜 💙 🍏 💚 💛 📙 🍎
+</center>
+<h1 style = font-size:80px>
+<div style="text-align: center;">
+<span style="color:purple">L</span>
+<span style="color:violet">e</span>
+<span style="color:blue">e</span>
+<span style="color:green">t</span>
+<span style="color:yellow">P</span>
+<span style="color:orange">r</span>
+<span style="color:orange">i</span>
+<span style="color:red">d</span>
+<span style="color:violet">e</span>
+</div>
+</h1>
