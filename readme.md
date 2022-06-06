@@ -146,6 +146,10 @@ expected results zipped together:
         exit(main())
 
 
+<br>
+
+>Leet Code Daily N Queens II
+![img](LP_Examples/LeetPride-002.png)
 
 # A few notes:
 Instantiating the LeetCodeCore object takes an optional time_all bool parameter.
@@ -174,7 +178,7 @@ Tallicia
 >>    python3 -m pip install -r requirements.txt 
 >>
 
->> PURPLE HEART (&#x1F49C;): 💜
+PURPLE HEART (&#x1F49C;): 💜
 BLUE HEART (&#x1F499;): 💙
 GREEN APPLE (&#x1F34F;): 🍏
 GREEN HEART (&#x1F49A;): 💚
