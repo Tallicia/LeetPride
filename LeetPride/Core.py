@@ -155,19 +155,35 @@ class LeetPrideCore:
 
     def test_print(self, any_fail, test_len, test_and_result):
         method_name = str(test_and_result[0])
-        p, params = test_and_result[1], None
+        p, params, param_display_list = test_and_result[1], None, None
         if p:
             if type(p) is str:
                 params = "'" + p + "'"
-            else:
+            elif type(p) is dict:
+                params = p
+            elif type(p) is list:
                 params = str(p)[1: -1]
         print(str_style(' :Testing: ' + '-' * 60 + ' :Testing: ', hvd='d', sp=1, col=Colors.purple_to_red))
         i, fail = test_and_result[1], False
         if params:
-            eval_s = 'self.test_class.' + method_name + '(' + params + ')'
+            if type(params) is dict:
+                params_check = [x for x in params.values()]
+                if type(params_check[0]) is tuple:
+                    param_list = [p[0] for p in params.values()]
+                    param_display_list = [p[1] for p in params.values()]
+                else:
+                    param_list = [p for p in params.values()]
+                eval_s = 'self.test_class.' + method_name + '(*param_list)'
+            else:
+                eval_s = 'self.test_class.' + method_name + '(' + params + ')'
         else:
             eval_s = 'self.test_class.' + method_name + '()'
         print(str_style(f'{self.test_class.__class__.__name__}.{method_name}'), end='')
+        if param_display_list is not None:
+            param_print = ''
+            params = []
+            for p in zip(param_display_list, param_list):
+                params += [p[0](p[1])]
         print('(' + Fore.MAGENTA + str(params)[:test_len] + Style.RESET_ALL + ')')
         if self.time_all:
             src = inspect.getsource(eval('self.test_class.' + method_name))
