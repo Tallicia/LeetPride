@@ -1,6 +1,6 @@
 from LP_Examples.LPC_Class_Pride import lpccp_example_main
 from LP_Examples.LPC_Class_Mix import lpccm_example_main
-from LP_Examples.LPC_Method_1_Stub import lpcm1_example_main
+from LP_Examples.LPC_Method_1 import lpcm1_example_main
 from LP_Examples.LPC_NodeList_1 import lpcnl1_example_main
 
 

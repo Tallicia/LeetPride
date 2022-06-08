@@ -164,7 +164,7 @@ class LeetPrideCore:
             elif type(p) is list:
                 params = str(p)[1: -1]
         print(str_style(' :Testing: ' + '-' * 60 + ' :Testing: ', hvd='d', sp=1, col=Colors.purple_to_red))
-        i, fail = test_and_result[1], False
+        i, fail, param_list = test_and_result[1], False, []
         if params:
             if type(params) is dict:
                 params_check = [x for x in params.values()]
@@ -180,7 +180,6 @@ class LeetPrideCore:
             eval_s = 'self.test_class.' + method_name + '()'
         print(str_style(f'{self.test_class.__class__.__name__}.{method_name}'), end='')
         if param_display_list is not None:
-            param_print = ''
             params = []
             for p in zip(param_display_list, param_list):
                 params += [p[0](p[1])]
