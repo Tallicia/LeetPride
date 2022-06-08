@@ -3,6 +3,7 @@ from LP_Examples.LPC_Class_Mix import lpccm_example_main
 from LP_Examples.LPC_Method_1_Stub import lpcm1_example_main
 from LP_Examples.LPC_NodeList_1 import lpcnl1_example_main
 
+
 def main() -> int:
     res_max = 0
     res_max = max(lpccm_example_main(), res_max)

@@ -1,9 +1,10 @@
 from typing import Optional
-from LeetPride import run_process, ListNode, make_node_list, append_node_list, print_nodes
+from LeetPride import ListNode, make_node_list, append_node_list, print_nodes
 from LeetPride import LeetPrideCore, completion_display
+# from LeetPride import run_process  # commented out to pass in the method identifier to run with multiple Solutions
 
 
-class Solution_NodeList:
+class SolutionNodeList:
     def get_intersection_node(self, head_a: ListNode, head_b: ListNode) -> Optional[ListNode]:
         if type(head_a) is list and type(head_b) is list:
             tail = make_node_list(head_a[2:])
@@ -30,7 +31,7 @@ def generate_tests():
     p_test2 = {'head_a': (append_node_list([1, 9, 1, ], nl_2_common), print_nodes),
                'head_b': (append_node_list([3, ], nl_2_common), print_nodes)}
 
-    return [('Solution_NodeList', None, True),
+    return [('SolutionNodeList', None, True),
             ('get_intersection_node', [[4, 1, 8, 4, 5], [5, 6, 1, 8, 4, 5]], 8),
             ('get_intersection_node', p_try, 8),
             ('get_intersection_node', p_try2, 8),
