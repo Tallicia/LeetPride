@@ -8,7 +8,7 @@ class Solution:
 
 
 def generate_tests():
-    test_result = [(([2, 8, 11, 15], 0),
+    test_result = [([[2, 8, 11, 15], 0],
                     [2])]
 
     ops, init_params, funcs = ['Solution'], [], ['method1']
