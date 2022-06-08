@@ -39,50 +39,50 @@ def make_tree(elements):
     return tree
 
 
-def print_tree(head: TreeNode) -> list:
+def list_tree(head: TreeNode) -> list:
     """
-    Print Tree in in-order order traversal
+    list Tree in in-order order traversal
     """
     # in order list generation
     out = []
     if head is not None:
-        out += print_tree(head.left)
+        out += list_tree(head.left)
         if head.val is not None:
             out += [head.val]
-        out += print_tree(head.right)
+        out += list_tree(head.right)
     return out
 
 
-def print_tree_pre(head: TreeNode) -> list:
+def list_tree_pre(head: TreeNode) -> list:
     """
-    Print Tree in pre-order order traversal
+    list Tree in pre-order order traversal
     """
     out = []
     if head is not None:
         if head.val is not None:
             out += [head.val]
-        out += print_tree_pre(head.left)
-        out += print_tree_pre(head.right)
+        out += list_tree_pre(head.left)
+        out += list_tree_pre(head.right)
     return out
 
 
-def print_level_order(root) -> List[int]:
+def list_level_order(root) -> List[int]:
     out = []
     h = height(root)
     for i in range(1, h + 1):
-        out += print_current_level(root, i)
+        out += list_current_level(root, i)
     return out
 
 
-def print_current_level(root, level) -> List[int | None]:
+def list_current_level(root, level) -> List[int | None]:
     out = []
     if root is None:
         return [None]
     if level == 1:
         out += [root.val]
     elif level > 1:
-        out += print_current_level(root.left, level - 1)
-        out += print_current_level(root.right, level - 1)
+        out += list_current_level(root.left, level - 1)
+        out += list_current_level(root.right, level - 1)
     return out
 
 

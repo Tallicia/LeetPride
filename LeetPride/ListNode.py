@@ -4,7 +4,7 @@ class ListNode:
         self.next = None
 
 
-def print_nodes(head: ListNode, addresses: bool = False) -> list:
+def list_nodes(head: ListNode, addresses: bool = False) -> list:
     out = []
     while head is not None:
         if addresses:
