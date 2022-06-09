@@ -1,13 +1,25 @@
-from typing import List
+# ListNode support
 
+LeetPride includes class TreeNode and helper functions for
+setting up and displaying TreeNodes for human-readable use and 
+test verification.
 
-class TreeNode:
-    def __init__(self, val: object = 0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+Helper functions will make creating tests and verifying tests 
+using list representation of TreeNodes much easier and quicker.  
 
+>
+>```
+>from LeetPride import run_process, TreeNode, insert_tree_node, make_tree, list_tree, list_tree_pre, list_level_order, list_current_level, height   
+>```
+>will quickly make available standard ListNode class
+>>
+>>      class TreeNode:
+>>          def __init__(self, val: object = 0, left=None, right=None):
+>>          self.val = val
+>>          self.left = left
+>>          self.right = right
 
+```
 def insert_tree_node(node: TreeNode, data: object):
     """
     :param node: A TreeNode
@@ -30,8 +42,8 @@ def insert_tree_node(node: TreeNode, data: object):
             break
         else:
             queue.append(node.right)
-
-
+```
+```
 def make_tree(elements):
     """
     create Tree from elements, usually a list.
@@ -42,8 +54,8 @@ def make_tree(elements):
     for element in elements[1:]:
         insert_tree_node(tree, element)
     return tree
-
-
+```
+```
 def list_tree(head: TreeNode) -> list:
     """
     list Tree in in-order order traversal
@@ -56,8 +68,8 @@ def list_tree(head: TreeNode) -> list:
             out += [head.val]
         out += list_tree(head.right)
     return out
-
-
+```
+```
 def list_tree_pre(head: TreeNode) -> list:
     """
     list Tree in pre-order order traversal
@@ -69,8 +81,8 @@ def list_tree_pre(head: TreeNode) -> list:
         out += list_tree_pre(head.left)
         out += list_tree_pre(head.right)
     return out
-
-
+```
+```
 def list_level_order(root) -> List[int]:
     """
     list Tree in level order
@@ -80,8 +92,8 @@ def list_level_order(root) -> List[int]:
     for i in range(1, h + 1):
         out += list_current_level(root, i)
     return out
-
-
+```
+```
 def list_current_level(root, level) -> List[int | None]:
     """
     list of the current level
@@ -95,8 +107,8 @@ def list_current_level(root, level) -> List[int | None]:
         out += list_current_level(root.left, level - 1)
         out += list_current_level(root.right, level - 1)
     return out
-
-
+```
+```
 def height(node):
     """
     list height of Tree at given Node
@@ -107,3 +119,4 @@ def height(node):
         l_height = height(node.left)
         r_height = height(node.right)
         return max(l_height + 1, r_height + 1)
+```

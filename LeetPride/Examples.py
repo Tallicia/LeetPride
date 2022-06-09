@@ -2,6 +2,7 @@ from LP_Examples.LPC_Class_Pride import lpccp_example_main
 from LP_Examples.LPC_Class_Mix import lpccm_example_main
 from LP_Examples.LPC_Method_1 import lpcm1_example_main
 from LP_Examples.LPC_NodeList_1 import lpcnl1_example_main
+from LP_Examples.LPC_Method_Multiple import lpcmm_example_main
 
 
 def main() -> int:
@@ -10,6 +11,7 @@ def main() -> int:
     res_max = max(lpccp_example_main(), res_max)
     res_max = max(lpcnl1_example_main(), res_max)
     res_max = max(lpcm1_example_main(), res_max)
+    res_max = max(lpcmm_example_main(), res_max)
     return res_max
 
 

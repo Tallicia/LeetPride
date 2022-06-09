@@ -114,7 +114,7 @@ class LeetPrideCore:
                 print(str_style(sol_source[:-1], box='Box', hvd='v', sp=5))
                 sol_hash = adler32(sol_source.encode())
                 sol_hex = str(hex(sol_hash).split('x')[-1])
-                print(str_style('Solution Adler-32 : ' + str(sol_hash) + ' || ' + sol_hex))
+                print(str_style('Solution Adler-32 : ' + str(sol_hash) + ' || ' + sol_hex + ' v0.69'))
             except NameError:
                 print(Colorate.Error('Invalid or No Class ' + sol_name + ' or Solution Defined'))
 
