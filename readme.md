@@ -28,7 +28,9 @@ linked lists are now available.
 
 ><h3>One time Setup</h3>
 >>simply install with 
-```pip install LeetPride```
+```
+pip install LeetPride
+```
 
 Screenshot of the 4 simple steps running in seconds.
 ![img](LP_Examples/LeetPride-001.png)
