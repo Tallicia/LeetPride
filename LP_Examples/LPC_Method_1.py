@@ -1,9 +1,10 @@
-from LeetPride.Core import *
+from LeetPride.Core import LeetPrideCore, completion_display
+from typing import Optional, List
 
 
-class Solution:
+class SolutionMethod:
     # @timeit
-    def method1(self, nums: List[int], target: int) -> List[int | None]:
+    def method_example(self, nums: List[int], target: int) -> List[int | None]:
         return [nums[target]]
 
 
@@ -11,7 +12,7 @@ def generate_tests():
     test_result = [([[2, 8, 11, 15], 0],
                     [2])]
 
-    ops, init_params, funcs = ['Solution'], [], ['method1']
+    ops, init_params, funcs = ['SolutionMethod'], [], ['method_example']
     tests_unified = [(ops[0], init_params, True)]
     for tr in test_result:
         for f in funcs:
