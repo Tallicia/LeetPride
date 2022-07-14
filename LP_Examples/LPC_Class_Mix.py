@@ -1,4 +1,5 @@
-from LeetPride.Core import *
+from LeetPride import LeetPrideCore, timeit, completion_display
+from typing import List, Optional
 
 
 class NumMatrix:
